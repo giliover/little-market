@@ -1,0 +1,18 @@
+[
+  {
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5459,
+    "username": "postgres",
+    "password": "@@__MEUNOMENAOEHjonny__@@!",
+    "database": "mercadinho",
+    "synchronize": true,
+    "logging": false,
+    "entities": ["src/modules/**/infra/typeorm/entities/*.ts"],
+    "migrations": ["src/shared/infra/typeorm/migrations/*.ts"],
+    "cli": {
+      "migrationsDir": ["src/shared/infra/typeorm/migrations/"],
+      "entitiesDir": ["src/modules/**/infra/typeorm/entities/"]
+    }
+  }
+]
