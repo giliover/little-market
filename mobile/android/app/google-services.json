@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "309188770290",
+    "project_id": "little-market-ad0db",
+    "storage_bucket": "little-market-ad0db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309188770290:android:b6cb961705233c6bc0536b",
+        "android_client_info": {
+          "package_name": "com.mercadinho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309188770290-pvc138pbsketl2j7gtg5a4qrikl7nbhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDti1K3ISI1ozxWpGbmJ4a6Nl5WQfY7Haw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309188770290-pvc138pbsketl2j7gtg5a4qrikl7nbhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
