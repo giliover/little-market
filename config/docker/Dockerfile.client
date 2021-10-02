@@ -1,0 +1,7 @@
+FROM node:15.2.1-alpine
+RUN mkdir -p /web.go-barber/src/
+WORKDIR /web.go-barber/src/
+COPY package.json /web.go-barber/
+RUN yarn
+COPY . /web.go-barber/src/
+CMD ["yarn", "start"]

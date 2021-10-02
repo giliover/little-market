@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  adminer.littlemarket:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  postgresql.littlemarket:
+    image: postgres
+    container_name: postgresql.littlemarket
+    environment:
+      POSTGRES_DB: "mercadinho"
+      POSTGRES_PASSWORD: "@@__MEUNOMENAOEHjonny__@@!"
+    ports:
+      - "5459:5432"
+    volumes:
+      - /var/lib/postgresql.littlemarket/data
+    restart: always
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 8081:27017
+    environment:
+      MONGO_INITDB_DATABASE: "mercadinho"
+      MONGO_INITDB_ROOT_USERNAME: "giliover"
+      MONGO_INITDB_ROOT_PASSWORD: "@@__MEUNOMENAOEHjonny__@@!"
+
+  server.littlemarket:
+    image: littlemarket/node
+    stdin_open: true
+    container_name: server.littlemarket
+    build:
+      context: ../server
+      dockerfile: ../config/docker/Dockerfile.server
+    environment:
+      NODE_ENV: development
+    ports:
+      - 5486:3333
+    volumes:
+      - ../server:/server.littlemarket
+      - /server.littlemarket/node_modules
+    restart: always

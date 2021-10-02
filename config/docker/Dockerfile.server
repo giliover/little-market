@@ -1,0 +1,7 @@
+FROM node:15.2.1-alpine
+RUN mkdir -p /server.littlemarketr/src/
+WORKDIR /server.littlemarketr/src/
+COPY package.json /server.littlemarketr/
+RUN yarn
+COPY . /server.littlemarketr/src/
+CMD ["yarn", "dev:server"]
